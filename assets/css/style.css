@@ -2,23 +2,25 @@
 * {
     box-sizing: border-box;
 }
+
 body{
 	background-image: url("../images/circseam.png");
 }
-.header {
+
+#header {
 
 }
 
 #logo{
 background-color: #c8712b;
 color:#ffff66;
-height: 45px;
-width: 50%;
+height:80px;
+text-align: center;
+margin-bottom: 50px;
 }
 
 
-.footer{
-
+#foote{
   clear:both;
   position: absolute;
   left:0;
@@ -30,13 +32,38 @@ width: 50%;
   padding-top: 20px;
 }
 
+
+
+.ptitl{
+width:110px;
+background-color: #c8712b	
+text-align: center;
+float: right;
 }
 
 
-#narrative{
-
+.ptith{
+background-color: #c8712b;
+color:#ffff66;
 }
 
+
+#narra{
+	background-color: #fbe6cb;
+	color: green;
+	font-size: 14px;
+	font-weight: 600;
+	font-style: italic;
+	padding:25px;
+}
+
+.centrify{
+	display: inline-block;
+	width:50%;
+	margin-left:25%;
+	align-content: center;
+    margin-bottom: 50px;		
+}
 
 
 
