@@ -4,21 +4,21 @@
 }
 
 body{
-	background-image: url("../images/circseam.png");
-}
-
-#header {
-
+	background-image: url("../images/conpen.png");
 }
 
 #logo{
+clear:both;	
+padding-top:10px;
+left:0px;
+top: 0px;
 background-color: #c8712b;
 color:#ffff66;
-height:80px;
+height:120px;
 text-align: center;
-margin-bottom: 50px;
+width:100%;
+margin-bottom: 30px;
 }
-
 
 #foote{
   clear:both;
@@ -32,26 +32,16 @@ margin-bottom: 50px;
   padding-top: 20px;
 }
 
-
-
 .ptitl{
-width:110px;
-background-color: #c8712b	
+width:160px;	
 text-align: center;
-float: right;
 }
-
-
-.ptith{
-background-color: #c8712b;
-color:#ffff66;
-}
-
 
 #narra{
+	margin-top: 20px;
 	background-color: #fbe6cb;
 	color: green;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	font-style: italic;
 	padding:25px;
@@ -59,12 +49,8 @@ color:#ffff66;
 
 .centrify{
 	display: inline-block;
+	align-content: center;
 	width:50%;
 	margin-left:25%;
-	align-content: center;
-    margin-bottom: 50px;		
+	
 }
-
-
-
-
