@@ -1,4 +1,4 @@
-// Setup routines - Variable initialization 
+// Variable initialization 
 // disPlaytile(c); // Display gems 
 // disPlaytile(s); // Display scores 
 //  clear Values
@@ -6,89 +6,80 @@
 // var gameScores=0 
 // prompt while playgame=true  {
 // init game variables
-// console.log("  "+targetNumber+"  " +userNumber+"  "+chrysOne+"  "+chrysTwo+"  "+chrysThr+"  "+chrysFou+"  ");
+// console.log("  "+targetNumber+"  " +userScore+"  "+chrysOne+"  "+chrysTwo+"  "+chrysThr+"  "+chrysFou+"  ");
 
 
 $(document).ready(function() {
 
 var gameWins=0;
 var gameLosses=0;
-var playGame= false;
+var playGame = false;
 
 
-// This is the start of the current game loop 
-
-if (confirm("Do you want to Play Chrystals?" ) == true){
+if (confirm("Do you want to Play Chrystals?" ) == true)
+                  {
    playGame = true;
-   console.log("1 Play Game is: ",playGame);
 }
 
+// This is the start of the overall game loop 
 
-if (playGame==true) {
-
-   console.log("2 Play Game is: ",playGame);
-
+if (playGame==true)  {
+console.log("PLay? "+playgame);
     var targetNumber = Math.floor(Math.random() * ((120-19)+1)+19);
-    var userNumber = 0;
+    var userScore = 0;
     var chrysOne = Math.floor(Math.random() * ((12-1)+1)+1);
     var chrysTwo = Math.floor(Math.random() * ((12-1)+1)+1);
     var chrysThr = Math.floor(Math.random() * ((12-1)+1)+1);
     var chrysFou = Math.floor(Math.random() * ((12-1)+1)+1);
-    var letterBtn = $("<button>");
-    
 
-      if (userNumber < targetNumber)  {
+    disPlayCurrent(targetNumber,userScore,gameWins,gameLosses); 
 
-        //display current totals 
-
-            $("div.targetNum").text(targetNumber);
-            $("div.curTotal").text(userNumber);
-            $("div.winLoss").text("Wins: "+gameWins+" / "+" Losses: "+gameLosses);
-
-
+          while (targetNumber < userScore) {
             
-               // accept button1  input
+            // accept button1 input
             $("#billy1").on("click",function(){
-            userNumber = userNumber + chrysOne;
-            console.log(" 3 Billy 1");
+            userScore = userScore + chrysOne;
             });
+
             // accept button2  input
             $("#billy2").on("click",function(){
-            userNumber = userNumber + chrysTwo;
-            console.log("Billy 2");
+            userScore = userScore + chrysTwo;
             });
             // accept button3  input
             $("#billy3").on("click",function(){
-            userNumber = userNumber + chrysThr;
-            console.log("Billy 3");
+            userScore = userScore + chrysThr;
             });    
             // accept button4  input
             $("#billy4").on("click",function(){
-            userNumber = userNumber + chrysFou;
-            console.log("Billy 4");
+            userScore = userScore + chrysFou;
             }); 
 
+            decideEndGame();   //Decide to end the game or not
 
-            if (userNumber > targetNumber) {
-                alert("YOU LOSE!");
-                gameLosses++;
-              }
+    }  // If loop
 
-            if (userNumber = targetNumber) {
-                 alert("YOU're MAHVELUS! You win!");
-                 console.log(userNumber,targetNumber);
-                 gameWins++;     
-              }
 
-          }  // End current game loop 
 
-          if (confirm("Do you want to keep playing?" ) =! true){
-            playGame = false;
-            console.log("1 Play Game is: ",playGame);
-            }
 
-}
 
-}  // End Multigame loop 
+function decideEndGame(){
+      disPlayCurrent(targetNumber,userScore,gameWins,gameLosses); 
+      if (userScore > targetNumber) {
+                      alert("YOU LOSE!");
+                      gameLosses++;
+                    }
+      else if (userScore === targetNumber) {
+              alert("YOU're MAHVELUS! You win!");
+              console.log(userScore,targetNumber);
+              gameWins++;     
+                    }
+}//End Function  
 
-} // End of function wrapper
+function disPlayCurrent(targetNumber,userScore,gameWins,gameLosses)  {
+  $("#targetNum").text(targetNumber);
+  $("#curTotal").text(userScore);
+  $("#totWins").text(gameWins);
+  $("#totLosses").text(gameLosses);
+} // Display current totals 
+
+}); // End function wrapper

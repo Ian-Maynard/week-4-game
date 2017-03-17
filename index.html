@@ -5,14 +5,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 
 <body>
     <!-- Global Bootstrap wrapper -->
     <div class="container">
-        <div class="col-sm-12" style="padding:0px;">
+        <div>
             <header id="logo">
                 <div>
                     <h1><strong>CHRYSTALS</strong></h1>
@@ -20,70 +20,73 @@
             </header>
         </div>
         <!-- END Container - Header, Nav -->
-        <div class="container centrify" style="margin-bottom:50px">
+  
+        <div class="centr">
             <div>
                 <div id="narra">
                     <p>You will be given a random number at the start of the game.There are four chrystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
                     <p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
                     <p>The value of each crystal is hidden from you until you click on it.
                     Each time the game starts, the game will change the value of each chrystal.</p>
-                    </div>
-
-
-
-            <div>
-                <div class="bic">
-                    <div>
-					<button id="billy1" align="left">
-					<img class="bic" height="75" width="75" src="assets/images/bc1a.png"></a>
-					</button>
-
-					<button id="billy2">
-					<img class="bic" height="75" width="75" src="assets/images/bc2a.png"></a>
-					</button>
-
-					<button id="billy3">
-					<img class="bic" height="75" width="75" src="assets/images/bc3a.png"></a>
-					</button>
-
-					<button id="billy4">
-					<img class="bic" height="75" width="75" src="assets/images/bc4a.png"></a>
-					</button>
-
-                    </div>
                 </div>
-            </div>
-
-
+    
+                    <div style="text-align: center; width:100%">
                     
+                       <div class="scoreBox">
+                           <span id="targetNum"> </span>
+                            <br/>
+                            <span>TARGET</span>
+                            <span class="intraScore">
+                            <br/>
+                            <button id="billy1" align="left">
+                            <img class="bic" height="55" width="55" src="assets/images/bc1a.png"></a>
+                            </button>
+                            </span>
+                        </div>
+
+                        <div class="scoreBox">
+                           <span id="curTotal"> </span>
+                            <br/>
+                            <span>SCORE</span>
+                            <span class="intraScore">
+                            <br/>
+                            <button id="billy2" align="left">
+                            <img class="bic" height="55" width="55" src="assets/images/bc2a.png"></a>
+                            </button>
+                            </span>
+                        </div>
+
+                        <div class="scoreBox">
+                            <span id="totWins"> </span>
+                            <br/>
+                            <span>WINS</span>
+                             <span class="intraScore">
+                            <br/>
+                            <button id="billy3" align="left">
+                            <img class="bic" height="55" width="55" src="assets/images/bc3a.png"></a>
+                            </button>
+                            </span>
+                        </div>
+
+                        <div class="scoreBox">
+                            <span id="totLosses">  </span>
+                            <br/>
+                            <span>LOSSES</span>
+                             <span class="intraScore">
+                            <br/>
+                            <button id="billy4" align="left">
+                            <img class="bic" height="55" width="55" src="assets/images/bc12a.png"></a>
+                            </button>
+                            </span>
+                        </div>
+                    </div>
+
             </div>
-        </div>
-        <!-- END Container - Narrative -->
-
-        <!-- Score Area -->
-
-
-			<div class="centrify" style="border:1px;">
-	    		<div id="targetNum" class="scoreBox">
-	    		</div>
-	    		<div id="winLoss" class="scoreBox">
-	    		</div>
-	    		<div id="curTotal"  class="scoreBox">
-	    		</div>
-			</div>
-
-
-
-
-        <footer id="foote">
-            <div class="col-sm-12 centrify">
-                <div id="scores"></div>
-            </div>
+    </div>
+       
+        <footer id="footer">
         </footer>
     </div>
-
-
-
 
     <!-- End Global Bootstrap wrapper -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
